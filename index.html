@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Space Heroes | Arcade Game</title>
+
+    <!-- Connecting CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="game-container">
+
+        <!-- Main Menu -->
+        <section id="main-menu" class="screen">
+            <h1>SPACE HEROES</h1>
+            <p>Protect the galaxy. Destroy the asteroids.</p>
+
+            <button id="start-btn">START GAME</button>
+        </section>
+
+        <!-- Game Screen -->
+        <section id="game-screen" class="screen hidden">
+
+            <div class="game-header">
+                <div>Score: <span id="score">0</span></div>
+                <div>Lives: <span id="lives">3</span></div>
+            </div>
+
+            <canvas id="gameCanvas" width="800" height="500">
+                Your browser does not support HTML Canvas.
+            </canvas>
+
+            <p class="controls">
+                Move: Arrow Keys / WASD | Shoot: Spacebar
+            </p>
+
+        </section>
+
+        <!-- Game Over Screen -->
+        <section id="game-over" class="screen hidden">
+            <h1>GAME OVER</h1>
+
+            <p>Your Final Score: <span id="final-score">0</span></p>
+
+            <button id="restart-btn">PLAY AGAIN</button>
+        </section>
+
+    </div>
+        <audio
+            id="background-music"
+            src="audio\background-music.mp3"
+            loop
+            preload="auto">
+        </audio>
+    <!-- Connecting JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
